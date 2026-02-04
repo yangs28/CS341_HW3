@@ -1,3 +1,11 @@
+/* 
+ * CS 341: Homework 3
+ * Purpose: A Javascript file that allows for functionality of the order button. Also adds checks for toppings.
+ * Also alerts the user if they selected vegan. Afterwards it displays the order details.
+ * File type: .js file
+ * Author: Sean Yang
+*/    
+
 $(document).ready(function () {
 //Catches any orders
 $("#orderButton").click(function () {
