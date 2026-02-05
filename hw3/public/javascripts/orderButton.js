@@ -9,6 +9,7 @@
 $(document).ready(function () {
 //Catches any orders
 $("#orderButton").click(function () {
+    var toppingSelected = $("input[name='toppingOption']:checked");
     //Requires a topping selection for all orders before it can be registered. Prevents errors where the topping order is undefined
     if (!toppingSelected.length) {
     alert("You have not selected a topping option!");
