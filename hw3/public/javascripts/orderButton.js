@@ -9,9 +9,8 @@
 $(document).ready(function () {
 //Catches any orders
 $("#orderButton").click(function () {
-    var toppingSelected = $("input[name='toppingOption']:checked");
     //Requires a topping selection for all orders before it can be registered. Prevents errors where the topping order is undefined
-    if (!toppingSelected.length) {
+    if (!toppingCheck()) {
     alert("You have not selected a topping option!");
     return;
     }
@@ -32,6 +31,16 @@ function veganCheck() {
         return true;
     } else {
         return false;
+    }
+}
+
+//Checks if the user has selected a topping. The user must select a topping before proceeding with the order
+function toppingCheck() {
+    var toppingSelected = $("input[name='toppingOption']:checked");
+    if (!toppingSelected.length) {
+        return false;
+    } else {
+        return true;
     }
 }
 
